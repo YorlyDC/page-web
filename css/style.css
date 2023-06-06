@@ -1,36 +1,13 @@
-* {
-    user-select: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-Bold.ttf');
-}
-
 body {
-    background: #050505;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  background-color: #fff;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 h1,
 h2 {
   text-align: center;
   margin-top: 0px;
-  font-weight: bold;
-  color: #333;
 }
 
 /* Estilos CSS para el slider */
@@ -40,21 +17,11 @@ h2 {
   height: auto;
   overflow: hidden;
   border-radius: 15px;
-  transition: transform 0.5s ease-in-out;
 }
 
 .slider {
   display: flex;
-  animation: fade 0.5s ease-in-out;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  transition: transform 0.9s ease-in-out;
 }
 
 .slider-slide {
@@ -62,11 +29,11 @@ h2 {
   width: 100%;
   height: auto;
   position: relative;
-  transition: transform 0.5s ease-in-out;
+  margin-right: 5px;
 }
 
 .slider-slide img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 15px;
 }
@@ -80,18 +47,16 @@ h2 {
 }
 
 .slider-nav-item {
-  width: 8%;
-  height: 8%;
-  margin: 0 5px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: gray;
+  margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
 }
 
 .slider-nav-item.active {
   background-color: black;
-  transition: background-color 0.5s ease-in-out;
 }
 
 .slider-overlay {
@@ -101,6 +66,7 @@ h2 {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
+  text-align: center;
   transition: opacity 0.5s ease;
   opacity: 0;
   pointer-events: none;
@@ -165,6 +131,25 @@ h2 {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
+.movies-container::-webkit-scrollbar {
+  /* Ocultar la barra de desplazamiento WebKit por defecto */
+  width: 0;
+}
+
+.poster-container::-webkit-scrollbar-track {
+  /* Ocultar el track de la barra de desplazamiento WebKit por defecto */
+  background-color: transparent;
+}
+
+.poster-container::-webkit-scrollbar-thumb {
+  /* Mostrar la barra de desplazamiento WebKit solo al hacer scroll */
+  background-color: transparent;
+}
+
+.poster-container:hover::-webkit-scrollbar-thumb {
+  /* Mostrar la barra de desplazamiento WebKit al hacer hover */
+  background-color: #888;
+}
 
 .movie {
   width: 250px;
@@ -183,8 +168,8 @@ h2 {
 
 .movie .genre {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: -5px;
+  right: 5px;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 5px;
@@ -192,21 +177,20 @@ h2 {
   font-size: 12px;
   text-transform: uppercase;
 }
-.movie-title {
-  font-size: 1.5rem;
-  color: #333;
-}
+
 .title {
   font-size: 14px;
+  font-weight: bold;
   margin-bottom: 10px;
-  text-transform: uppercase; /* Cambia el color a tu elección */
+  text-transform: uppercase;
+  color: #fff; /* Cambia el color a tu elección */
   text-align: left;
 }
 
 .movie .imdb-rating {
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: -5px;
+  left: 5px;
   /*display: flex;*/
   align-items: center;
   color: orange;
@@ -270,6 +254,25 @@ h2 {
     transform: scale(0.95);
   }
 }
+
+/* Estilos por defecto para las imágenes del poster de películas */
+.poster-image {
+  width: 100%; /* Tamaño máximo en dispositivos móviles */
+}
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .movies-container {
+    width: 50%; /* Tamaño reducido en tabletas */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .movies-container {
+    width: 33.33%; /* Tamaño aún más reducido en pantallas de escritorio */
+  }
+}
+
 /*Estilos para los botones categoria*/
 /*.title-category {
   font-size: 14px;
@@ -309,42 +312,4 @@ h2 {
 }
 .categories-container::-webkit-scrollbar {
   display: none;
-}
-
-
-.clickable-image {
-  position: relative;
-}
-
-.clickable-image:hover::before {
-  content: attr(title);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.5rem;
-  background-color: #333;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.clickable-image:hover::after {
-  content: "";
-  position: absolute;
-  bottom: -0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 0.5rem solid transparent;
-  border-top-color: #333;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.clickable-image:hover::before,
-.clickable-image:hover::after {
-  opacity: 1;
 }
