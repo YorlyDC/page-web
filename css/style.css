@@ -29,6 +29,8 @@ h1,
 h2 {
   text-align: center;
   margin-top: 0px;
+  font-weight: bold;
+  color: #333;
 }
 
 /* Estilos CSS para el slider */
@@ -193,10 +195,8 @@ h2 {
 
 .title {
   font-size: 14px;
-  font-weight: bold;
   margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #fff; /* Cambia el color a tu elección */
+  text-transform: uppercase; /* Cambia el color a tu elección */
   text-align: left;
 }
 
