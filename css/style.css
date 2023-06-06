@@ -89,6 +89,7 @@ h2 {
 
 .slider-nav-item.active {
   background-color: black;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .slider-overlay {
@@ -98,7 +99,6 @@ h2 {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
-  text-align: center;
   transition: opacity 0.5s ease;
   opacity: 0;
   pointer-events: none;
@@ -162,25 +162,6 @@ h2 {
   padding-bottom: 15px;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
-}
-.movies-container::-webkit-scrollbar {
-  /* Ocultar la barra de desplazamiento WebKit por defecto */
-  width: 0;
-}
-
-.poster-container::-webkit-scrollbar-track {
-  /* Ocultar el track de la barra de desplazamiento WebKit por defecto */
-  background-color: transparent;
-}
-
-.poster-container::-webkit-scrollbar-thumb {
-  /* Mostrar la barra de desplazamiento WebKit solo al hacer scroll */
-  background-color: transparent;
-}
-
-.poster-container:hover::-webkit-scrollbar-thumb {
-  /* Mostrar la barra de desplazamiento WebKit al hacer hover */
-  background-color: #888;
 }
 
 .movie {
