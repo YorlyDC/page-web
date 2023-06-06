@@ -10,6 +10,10 @@ h2 {
   margin-top: 0px;
 }
 
+a {
+  text-decoration:none;
+}
+
 /* Estilos CSS para el slider */
 .slider-container {
   position: relative;
@@ -168,8 +172,8 @@ h2 {
 
 .movie .genre {
   position: absolute;
-  top: -5px;
-  right: 5px;
+  top: .5em;
+  right: .5em;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 5px;
@@ -189,8 +193,8 @@ h2 {
 
 .movie .imdb-rating {
   position: absolute;
-  top: -5px;
-  left: 5px;
+  top: 0.5em;
+  left: 1em;
   /*display: flex;*/
   align-items: center;
   color: orange;
@@ -207,16 +211,12 @@ h2 {
 }
 
 .movie .tooltip {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 80%;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 5px;
   border-radius: 5px;
-  font-weight: bold;
-  font-size: 12px;
+  font-size: .5rem;
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   white-space: normal; /* Cambiado a "normal" para permitir múltiples líneas */
@@ -237,7 +237,7 @@ h2 {
   .movies-container {
     overflow-x: scroll;
     flex-wrap: nowrap;
-    gap: 0px; /* Reducir el espacio entre películas */
+    gap: 1px; /* Reducir el espacio entre películas */
   }
 
   .movie {
@@ -258,19 +258,6 @@ h2 {
 /* Estilos por defecto para las imágenes del poster de películas */
 .poster-image {
   width: 100%; /* Tamaño máximo en dispositivos móviles */
-}
-
-/* Estilos para pantallas más grandes */
-@media screen and (min-width: 768px) {
-  .movies-container {
-    width: 50%; /* Tamaño reducido en tabletas */
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .movies-container {
-    width: 33.33%; /* Tamaño aún más reducido en pantallas de escritorio */
-  }
 }
 
 /*Estilos para los botones categoria*/
