@@ -181,8 +181,8 @@ h2 {
 
 .movie .genre {
   position: absolute;
-  top: -5px;
-  right: 5px;
+  top: 1em;
+  right: 1em;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 5px;
@@ -202,8 +202,8 @@ h2 {
 
 .movie .imdb-rating {
   position: absolute;
-  top: -5px;
-  left: 5px;
+  top: 1em;
+  left: 1em;
   /*display: flex;*/
   align-items: center;
   color: orange;
