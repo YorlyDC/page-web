@@ -158,7 +158,7 @@ a {
 .movie {
   width: 250px;
   position: relative;
-  background-color: #000;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -174,7 +174,7 @@ a {
 .movie .genre {
   position: absolute;
   top: -0.5em;
-  right: -0.2em;
+  right: 0.3em;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 5px;
@@ -208,10 +208,6 @@ a {
 .movie .imdb-rating::before {
   content: "\2605";
   margin-right: 2px;
-}
-
-.tooltip {
-  
 }
 
 .movie .tooltip {
