@@ -173,8 +173,8 @@ a {
 
 .movie .genre {
   position: absolute;
-  top: .5em;
-  right: .5em;
+  top: -0.5em;
+  right: -0.2em;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 5px;
@@ -194,8 +194,8 @@ a {
 
 .movie .imdb-rating {
   position: absolute;
-  top: 0.5em;
-  left: 1em;
+  top: -0.5em;
+  left: .5em;
   align-items: center;
   color: orange;
   border-radius: 5px;
@@ -219,7 +219,7 @@ a {
   color: #f2f2f2;
   padding: 5px;
   border-radius: 5px;
-  font-size: .5rem;
+  font-size: .6rem;
   text-align: center;
   white-space: normal; /* Cambiado a "normal" para permitir múltiples líneas */
   overflow: hidden;
