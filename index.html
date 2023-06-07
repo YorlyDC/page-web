@@ -2,29 +2,49 @@
 <html>
 
 <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatiable" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pantalla de Inicio - Aplicación de Películas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slider-slide">
-        <a href="pagina1.html"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/80C64C0B63382CD3ED2653356125F275F63D036028A77D38DC3286AD851A6833/scale?width=1200&aspectRatio=1.78&format=jpeg" alt="Imagen 1"></a>
-        <div class="slider-overlay">
-          <button>Reproducir</button>
+      <!-- Slider main container -->
+    <div class="swiper swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://i.blogs.es/535dc3/el-senor-de-los-anillos-y-el-hobbit/1366_2000.jpeg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://img.asmedia.epimg.net/resizer/8CrLS-tpAOrvM3jNRpJOT580cSg=/644x362/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/GWBXMVZ7I5L3DFKBUDAUUKI5GI.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://areajugones.sport.es/wp-content/uploads/2020/09/elsenordelosanillos.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://raw.githubusercontent.com/teamxsplus/xstheme/main/Fondo-Azul.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://raw.githubusercontent.com/teamxsplus/xstheme/main/Fondo-Rojo.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://raw.githubusercontent.com/teamxsplus/xstheme/main/Fondo-Azul.jpg" alt="" />
+            </div>
         </div>
-      </div>
-      <div class="slider-slide">
-        <a href="pagina2.html"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/80C64C0B63382CD3ED2653356125F275F63D036028A77D38DC3286AD851A6833/scale?width=1200&aspectRatio=1.78&format=jpeg" alt="Imagen 2"></a>
-        <div class="slider-overlay">
-          <button>Reproducir</button>
-        </div>
-      </div>
-      <!-- Repite para las demás imágenes -->
+        <!-- If we need pagination -->
+        <div class="swiper-pagination swiper-dots"></div>
+
+        <!-- If we need navigation buttons -->
+        <!--<div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>-->
+
+        <!-- If we need scrollbar -->
+        <!--<div class="swiper-scrollbar"></div>-->
     </div>
-    <div class="slider-nav"></div>
-  </div>
   <!--<h2 class="title-category">Categorías Populares</h2>-->
   <div class="categories-container">
     <button class="category">Accion</button>
