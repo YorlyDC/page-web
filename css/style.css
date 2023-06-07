@@ -156,3 +156,13 @@ a {
 .categories-container::-webkit-scrollbar {
   display: none;
 }
+
+.swiper-pagination-bullet {
+    background-color: #F7F7F7 !important;
+    /* Color de los puntos inactivos */
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+    /* Color del punto activo */
+}
