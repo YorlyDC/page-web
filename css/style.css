@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Roboto'; /* Nombre de la fuente que deseas utilizar */
-  src: url('Roboto-Bold.ttf') format('truetype'); /* Ruta relativa o absoluta al archivo de la fuente */
+  font-family: "Roboto"; /* Nombre de la fuente que deseas utilizar */
+  src: url("Roboto-Bold.ttf") format("truetype"); /* Ruta relativa o absoluta al archivo de la fuente */
   /* Otras propiedades opcionales para la fuente, como weight y style */
   font-weight: bold;
   font-style: normal;
@@ -41,8 +41,8 @@ a {
 }
 
 .swiper-hero .swiper-slide {
-        width: 250px;
-      }
+  width: 250px;
+}
 
 .swiper-hero img {
   width: 100%;
@@ -50,32 +50,51 @@ a {
   object-fit: cover;
 }
 
-
 .swiper-hero .swiper-slide img {
   border-radius: 8px;
 }
 
-.swiper hero .swiper-slide {
+.swiper-hero .swiper-slide {
   min-width: 200px; /* Tamaño mínimo para cada slide */
 }
 
 /*Slider con img horizontal*/
+
 .swiper-rectangula {
   width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  min-width: 200px;
 }
+
 .swiper-rectangula img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
+
 .swiper-rectangula .swiper-slide img {
   border-radius: 8px;
 }
 
-.swiper-slide {
-  min-width: 150px;
+.swiper-rectangula .swiper-slide {
+  min-width: 200px; /* Tamaño mínimo para cada slide */
+}
+
+.swiper-rectangula .swiper-button-prev,
+.swiper-rectangula .swiper-button-next {
+  --swiper-navigation-size: 13px;
+  --swiper-theme-color: #fff;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+}
+
+.swiper-rectangula .swiper-button-prev {
+  left: -10px;
+}
+.swiper-rectangula .swiper-button-next {
+  right: -10px;
 }
 
 /*Poster de peliculas*/
@@ -179,15 +198,15 @@ a {
     flex: 0 0 auto;
     width: 130px;
   }
-  
+
   .title {
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  /*text-transform: uppercase;*/
-  color: #fff; /* Cambia el color a tu elección */
-  text-align: left;
-}
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /*text-transform: uppercase;*/
+    color: #fff; /* Cambia el color a tu elección */
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 768px) {
