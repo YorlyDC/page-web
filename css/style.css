@@ -1,5 +1,5 @@
 body {
-  background-color: #000;
+  background-color: #010507;
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -49,7 +49,7 @@ a {
   width: 250px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -58,7 +58,7 @@ a {
   height: auto;
   object-fit: cover;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .title {
