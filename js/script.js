@@ -2,19 +2,19 @@ const swiper = new Swiper(".swiper-hero", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  effect: "fade",
+  effect: "slide",
   autoplay: {
     delay: 5000,
     pauseOnMouseEnter: true,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
 
   // If we need pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination"
     //dynamicBullets: true,
     //dynamicMainBullets: 2,
-  },
+  }
 
   // Navigation arrows
   //navigation: {
@@ -32,11 +32,7 @@ const swiper2 = new Swiper(".swiper-rectangula", {
   // Optional parameters
   direction: "horizontal",
   loop: false,
-  effect: "coverflow",
-  grid: {
-    rows: 1,
-    colum: 1,
-  },
+  effect: "flip",
 
   // If we need pagination
   //pagination: {
@@ -46,10 +42,10 @@ const swiper2 = new Swiper(".swiper-rectangula", {
   //}
 
   // Navigation arrows
-  //navigation: {
-  //    nextEl: '.swiper-button-next',
-  //    prevEl: '.swiper-button-prev',
-  //  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
 
   // And if we need scrollbar
   //scrollbar: {
