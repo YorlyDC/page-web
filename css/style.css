@@ -1,7 +1,17 @@
+@font-face {
+  font-family: 'Roboto'; /* Nombre de la fuente que deseas utilizar */
+  src: url('Roboto-Bold.ttf') format('truetype'); /* Ruta relativa o absoluta al archivo de la fuente */
+  /* Otras propiedades opcionales para la fuente, como weight y style */
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
-  background-color: #010507;
+  background-color: #020309;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0px;
 }
 
 h1,
@@ -13,30 +23,67 @@ h2 {
 a {
   text-decoration: none;
 }
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /*text-transform: uppercase;*/
+  color: #fff; /* Cambia el color a tu elección */
+  text-align: left;
+}
+
 /*Estilos del slider*/
 .swiper-hero {
-    width: 100%;
-    height: auto;
-    margin-top: 5px;
-    box-shadow: inset 0 -100px 50px -9px rgba(0, 0, 0, 0.5); /* Agregar sombra hacia arriba */
-  }
-  .swiper-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+}
 
-  }
-  .swiper-hero .swiper-slide img {
-    border-radius: 8px;
-  }
+.swiper-hero .swiper-slide {
+        width: 250px;
+      }
 
+.swiper-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.swiper-hero .swiper-slide img {
+  border-radius: 8px;
+}
+
+.swiper hero .swiper-slide {
+  min-width: 200px; /* Tamaño mínimo para cada slide */
+}
+
+/*Slider con img horizontal*/
+.swiper-rectangula {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.swiper-rectangula img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-rectangula .swiper-slide img {
+  border-radius: 8px;
+}
+
+.swiper-slide {
+  min-width: 150px;
+}
 
 /*Poster de peliculas*/
 .movies-container {
   display: flex;
   overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 15px;
+  gap: 10px;
+  padding-bottom: 10px;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
@@ -61,19 +108,25 @@ a {
   border-radius: 8px;
 }
 
-.title {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #fff; /* Cambia el color a tu elección */
-  text-align: left;
+.movie-rectangula {
+  width: 250px !important;
+  position: relative;
+  /*background-color: rgba(255, 255, 255, 0.1);*/
+  border-radius: 8px;
+  overflow: hidden;
 }
 
+.movie-rectangula img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);*/
+  border-radius: 8px;
+}
 .movie .imdb-rating {
   position: absolute;
-  top: -0.9em;
-  left: 9.9em;
+  top: -0.5em;
+  left: 0.5em;
   align-items: center;
   color: orange;
   border-radius: 5px;
@@ -88,7 +141,29 @@ a {
   margin-right: 2px;
 }
 
+.movie-rectangula .imdb-rating {
+  position: absolute;
+  top: -0.5em;
+  left: 0.5em;
+  align-items: center;
+  color: orange;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.movie-rectangula .imdb-rating::before {
+  content: "\2605";
+  margin-right: 2px;
+}
+
 .movie .tooltip:hover {
+  -webkit-line-clamp: unset;
+}
+
+.movie-rectangula .tooltip:hover {
   -webkit-line-clamp: unset;
 }
 
@@ -97,15 +172,52 @@ a {
   .movies-container {
     overflow-x: scroll;
     flex-wrap: nowrap;
-    gap: 1px; /* Reducir el espacio entre películas */
+    gap: 5px; /* Reducir el espacio entre películas */
   }
 
   .movie {
     flex: 0 0 auto;
-    margin-right: 20px;
-    width: 160px;
+    width: 130px;
+  }
+  
+  .title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /*text-transform: uppercase;*/
+  color: #fff; /* Cambia el color a tu elección */
+  text-align: left;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .movie-rectangula {
+    flex: 0 0 auto;
+    width: 250px;
+  }
+
+  .movie-rectangula img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);*/
+    border-radius: 8px;
+  }
+
+  .movie-rectangula .imdb-rating {
+    position: absolute;
+    top: -0.5em;
+    left: 0.5em;
+    align-items: center;
+    color: orange;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   }
 }
+
 @media screen and (max-width: 768px) {
   .clickable-image img {
     transition: transform 0.2s ease-in-out;
@@ -157,12 +269,19 @@ a {
   display: none;
 }
 
-.swiper-pagination-bullet {
-    background-color: #F7F7F7 !important;
-    /* Color de los puntos inactivos */
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: #ffc700;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-inactive-color: #ffc700;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
 }
 
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: #fff !important;
-    /* Color del punto activo */
+.swiper-hero .swiper-pagination-bullet {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(255, 195, 0, 0.25);
 }
