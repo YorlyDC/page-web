@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(var(--text-color));
+    font-family: var(--font);
+}
+
+:root {
+    --font: "Poppins", sans-serif;
+    --main-color: var(--brand-color-1);
+    --brand-color-1: #f10221;
+    --black-1: #000000;
+    --black-2: #181818;
+    --black-3: #4f4e50;
+    --black-4: #807e81;
+    --text-color: 255, 255, 255;
+    --swiper-theme-color: var(--main-color);
+}
+
+.post-body-wrapper {
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.post-header {
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;
+    background: var(--black-2);
+}
+
+@media screen and (max-width: 870px) {
+    .post-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .image-and-btn {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .image-and-btn {
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.post-header .image-and-btn img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 2 / 3;
+    margin-bottom: 10px;
+}
+
+.button-trailer {
+    margin: 1rem 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f10221;
+}
+
+@media screen and (max-width: 870px) {
+    .post-header .image-and-btn img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.bs-favs,
+.delete-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, .15);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.none-btn {
+    display: none;
+}
+
+.post-header__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post-header__info ul {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width: 490px) {
+    .post-header__info {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .post-header__info {
+        align-items: center;
+    }
+}
+
+.post-header__info ul li.tmdb-rate {
+    background: gold;
+    border: 1px solid #736201;
+}
+
+.post-header__info ul li {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, .1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.tmdb-rate,
+.tmdb-rate i {
+    color: #000;
+}
+
+@media screen and (max-width: 490px) {
+    .post-header__info ul li {
+        font-size: 14px;
+    }
+}
+
+.post-header__info p.resume {
+    opacity: .7;
+}
+
+@media screen and (max-width: 870px) {
+    .post-header__info p.resume {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .post-header__info p.resume {
+        text-align: justify;
+    }
+}
+
+.hacker {
+
+    background: red;
+
+    color: white;
+
+    width: 100%;
+
+    height: 40px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    font-size: 18px;
+}
+
+.hacker:active {
+
+    background: black;
+
+    color: red;
+
+}
+
+.bs-video-player {
+    margin-bottom: 100px;
+}
+
+.player-options {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.player-options li {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--black-2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.player-options li.active {
+    background: var(--main-color);
+}
+
+@media only screen and (max-width: 580px) {
+
+    .player-options li,
+    .control {
+        font-size: 15px;
+        padding: 5px 10px;
+        border-radius: 2px;
+    }
+}
+
+.bs-iframes li {
+    padding: 10px;
+    display: none;
+    background: var(--black-2);
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 20 / 7;
+}
+
+.bs-iframes li.active {
+    display: block;
+}
+
+@media only screen and (max-width: 1050px) {
+    .bs-iframes li {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.bs-iframes iframe {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.content-sinopsis {
+    max-height: 160px;
+    /* Altura máxima del contenedor de sinopsis */
+    overflow: auto;
+    /* Oculta el contenido que excede la altura máxima */
+    position: relative;
+}
+
+.sinopsis-overlay {
+    top: 110px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    /* Ajusta la altura del oscurecimiento */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    /* Asegura que el oscurecimiento esté sobre el contenido */
+}
+
+
+
+.content-sinopsis::-webkit-scrollbar {
+    display: none;
+    /* Oculta la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
+}
+
+.resume {
+    top: -40px;
+    position: relative;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 870px) {
+    .resume {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .resume {
+        text-align: justify;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos personalizados aquí
+
+body {
+    background: #000;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    background-size: cover !important;
+    background-position: center !important;
+    filter: blur(1px);
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.rating {
+    background-color: gold;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    border: 1px solid #181818;
+    margin-top: 6.5em;
+    position: relative;
+    max-width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.genres {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.genres li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.buttons {
+    margin: 1rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-favorite {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.delete {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+}
+
+.details-container {
+    margin: 0 0 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-container ul {
+    display: flex;
+    gap: 15px;
+}
+
+.details-container li {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.fa-star {
+    font-size: 14px;
+    color: #000;
+} */
+
+
+
+
+
+
+
+
+/* Estilos para hacer que el reproductor de video del tráiler sea responsive */
+.trailer {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Proporción de aspecto 16:9 */
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+}
+
+.trailer iframe,
+.trailer object,
+.trailer embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para el encabezado */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los formularios y botones */
+.form-control {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    margin-top: 20px;
+}
+
+/* Estilos para la sección de detalles de la película */
+.col-md-6 {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Estilos para los detalles de la película */
+#movie-details {
+    text-align: left;
+}
+
+/* Estilos para el contenedor de la película seleccionada */
+.movie-container {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.movie-container:hover {
+    transform: scale(1.02);
+}
+
+/* Estilos para las vistas previas de trailers */
+#trailer-previews {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+/* Estilos para el botón "Copiar al Portapapeles" */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
